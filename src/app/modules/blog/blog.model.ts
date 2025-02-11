@@ -1,8 +1,8 @@
 import { model, Schema } from 'mongoose';
 import {  TBlogs } from './blog.Interface';
 
-// Create Bi Cycle Schema
-const BikeSchema = new Schema<TBlogs>({
+// Create Blog Cycle Schema
+const BlogSchema = new Schema<TBlogs>({
   title: {
     type: String,
     required: true,
@@ -17,11 +17,10 @@ const BikeSchema = new Schema<TBlogs>({
   },
   category: {
     type: String,
-    enum: ['Tech ', 'Graphic ', 'Freelancing ', 'Web'],
     required: true,
   },
   
 });
 
 // Export Model
-export const Blogs = model<TBlogs>('Blogs', BikeSchema);
+export const Blogs = model<TBlogs>('Blogs', BlogSchema);

@@ -1,11 +1,10 @@
-import { z } from 'zod'; 
-import { BikeCategory } from './blog.constant';
+import { z } from 'zod';  
 
 const createBlogsValidationSchema = z.object({
   body: z.object({
     title: z.string({ required_error: 'Please Provide a Blog Title' }),
     content: z.string({ required_error: 'Please Provide content' }),
-    category: z.enum([...BikeCategory] as [string, ...string[]]),
+    category: z.string().optional(),
     image: z.string().optional(),
   }),
 });

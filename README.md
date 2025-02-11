@@ -1,12 +1,10 @@
-# 🚲 Bike Store API
+# 🚲
 
-A Node.js, Express.js and MongoDB based API designed to manage a Bike store. The API enables Admin can Create Bike and Manage and users can Create Account place orders and Complete Payment using ShurjoPay.
+
 
 ## 🚀 Features
 
-1. **Order Bikes:** Users can place orders with Product id and Quantity. Total Price and User Info Automatically Calculate and Added from Backend.
-2. **Payment System:** User Can pay Using ShurjoPay Payment Gateway.
-3. **Profile Manage:** User Can Create and Update Personal Profile Information.
+
 
 ## 🛠️ Installation and Setup
 
@@ -53,23 +51,22 @@ http://localhost:5000
 
 ## Product Endpoints
 
-1. Create a Bike
+1. Create a Blog
    Method: POST
-
 URL:
 
 ```bash
-/api/v1/Bike
+/api/v1/Blogs
 ```
 
 Description: Add a new Bike to the database.
 
 2. Get All Bikes
    Method: GET
-   URL:
+   URL:Blogs
 
 ```bash
-/api/v1/Bike
+/api/v1
 ```
 
 Description: Retrieves All Bikes. Optional search by type using the searchTerm query parameter by brand, Bike name, or category and Filters for price range, model, brand, category, and availability.
