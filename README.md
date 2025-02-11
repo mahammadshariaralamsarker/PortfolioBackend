@@ -34,18 +34,13 @@ NODE_ENV=<deployment>
 BCRYPT_SALT_ROUNDS=<bcrypt_salt_number>
 JWT_ACCESS_TOKEN_SECRET=<jwt_access_token_secret>
 JWT_ACCESS_EXPIRES_IN=<jwt_access_experies_in>
-SP_ENDPOINT=<shurjo_pay_sp_end_point>
-SP_USERNAME=<shurjo_pay_sp_username>
-SP_PASSWORD=<shurjo_pay_sp_password>
-SP_PREFIX=<shurjo_pay_sp_prefix>
-SP_RETURN_URL=<shurjo_pay_sp_return_url>
-DB_FILE=<shurjo_pay_db_file>
+ 
 ```
 
 4. Start the server:
 
 ```bash
- npm run start:dev
+ npm run  dev
 ```
 
 5. The API will be available at
