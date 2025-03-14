@@ -1,23 +1,40 @@
-import { Router } from 'express'; 
-import { AuthRouter } from '../modules/auth/auth.routes';  
-import { ProjectRoutes } from '../modules/project/project.routes';
-import { BlogRoutes } from '../modules/blog/blog.routes';
+import { Router } from 'express';
+import { UserRoutes } from '../modules/user/user.routes';
+import { AuthRoutes } from '../modules/auth/auth.routes';
+import { MedicineRoutes } from '../modules/medicine/medicine.routes';
+import { CouponRoutes } from '../modules/coupon/coupon.routes';
+import { OrderRoutes } from '../modules/order/order.routes';
+import { ReviewRoutes } from '../modules/reviews/reviews.routes';
 
 const router = Router();
 
 const moduleRoutes = [
   {
-    path: '/',
-    route: ProjectRoutes,
-  },                                                    
-  {
-    path: '/admin/blogs',
-    route: BlogRoutes,
-  },                                                    
+    path: '/user',
+    route: UserRoutes,
+  },
   {
     path: '/auth',
-    route: AuthRouter,
+    route: AuthRoutes,
+  },
+  {
+    path: '/medicine',
+    route: MedicineRoutes,
+  },
+  {
+    path: '/coupon',
+    route: CouponRoutes,
+  },
+  {
+    path: '/order',
+    route: OrderRoutes,
+  },
+  {
+    path: '/review',
+    route: ReviewRoutes,
   },
 ];
+
 moduleRoutes.forEach((route) => router.use(route.path, route.route));
+
 export default router;

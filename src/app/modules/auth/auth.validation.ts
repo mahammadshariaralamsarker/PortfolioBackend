@@ -1,12 +1,16 @@
 import { z } from 'zod';
 
-const userLoginValidationSchema = z.object({
+export const userLoginSchema = z.object({
   body: z.object({
-    email: z.string({ required_error: 'Please Provide Your Email' }),
-    password: z.string({ required_error: 'Please Provide Your Password' }),
+    identifier: z.string({
+      required_error: 'Email or Mobile Number is Required!',
+    }),
+    password: z.string({
+      required_error: 'Password is Required!',
+    }),
   }),
 });
 
-export const UserLoginValidationSchemas = {
-  userLoginValidationSchema,
+export const AuthValidationSchemas = {
+  userLoginSchema,
 };

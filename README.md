@@ -1,10 +1,51 @@
-# 🚲
+
+## 🏥 Medi Mart - Medicine Store Overview
+
+Medi Mart is a modern online medicine store where users can conveniently purchase medicines. For prescription-required medicines, users must upload a valid prescription during checkout. The platform ensures a secure shopping experience with a trusted payment gateway.
+
+## 🚛 Delivery Options:
+Users can choose from three delivery options, each with different charges:
+1️⃣ Home Delivery – Standard delivery to your doorstep.
+2️⃣ Store Pickup – Collect your order from our nearest store.
+3️⃣ Express Delivery – Get your order delivered faster with priority service.
+
+Medi Mart provides a seamless, secure, and user-friendly experience for all your healthcare needs!
+
+## [ Live API URL](https://hammad-sadi-portfolio.vercel.app)
+
+Click here for the Medi Mart API Site: [https://hammad-sadi-portfolio.vercel.app/](https://hammad-sadi-portfolio.vercel.app/)
 
 
+## 🚀 Project Features - Medi Mart
 
-## 🚀 Features
+👥 User Features
+
+1. **Medicine Purchase:** Users can browse and buy medicines.
+2. **Prescription Upload:** Required for specific medicines during checkout.
+3. **Secure Payment:** Payments processed via a trusted payment gateway.
+4. **Delivery Options:** Choose from Home Delivery, Store Pickup, or Express Delivery, with charges applied accordingly.
+5. **Order Tracking:** Users can track their order Checking status:
+ Checking Status: "In Review" | "Accepted" | "Denied"
+ Delivery Status: "Processing" | "Shipped" | "Delivered" | "Pending"
+6. **Coupon & Discounts:** Apply discount coupons to get special offers.
+
+👤 Admin Features
+
+8. **Prescription Verification:** Admin reviews and approves prescriptions before order processing.
+9. **Order Management:** Get and manage all user orders.
+10. **Delivery Status Update:** Admin can update the delivery progress.
+10. **Medicine Management:** Admin can Manage Medicine.
 
 
+## 🧑‍💻 Usegaes Technologies
+
+💻 Backend Technologies
+- Node JS
+- Express JS
+- Typescript
+- MongoDB
+- Mongoose
+- Zod
 
 ## 🛠️ Installation and Setup
 
@@ -26,203 +67,32 @@ npm install
 3. Create a .env file in the root directory and configure the following environment variables:
 
 ```bash
- PORT=5000
-MONGODB_URL=<your-mongodb-url>
+  PORT=5000
+DB_URL=<your-mongodb-url>
 NODE_ENV=<deployment>
 BCRYPT_SALT_ROUNDS=<bcrypt_salt_number>
 JWT_ACCESS_TOKEN_SECRET=<jwt_access_token_secret>
 JWT_ACCESS_EXPIRES_IN=<jwt_access_experies_in>
- 
+SP_ENDPOINT=<shurjo_pay_sp_end_point>
+SP_USERNAME=<shurjo_pay_sp_username>
+SP_PASSWORD=<shurjo_pay_sp_password>
+SP_PREFIX=<shurjo_pay_sp_prefix>
+SP_RETURN_URL=<shurjo_pay_sp_return_url>
+DB_FILE=<shurjo_pay_db_file>
+SM_PASS=<email_send_pass>
 ```
 
-4. Start the server:
+
+4. Start the Client:
 
 ```bash
- npm run  dev
+ npm run dev
 ```
 
-5. The API will be available at
+5. The Live Site will be available at
 
 ```bash
 http://localhost:5000
 ```
 
-# 📚 API Endpoints
 
-## Product Endpoints
-
-1. Create a Blog
-   Method: POST
-URL:
-
-```bash
-/api/v1/Blogs
-```
-
-Description: Add a new Bike to the database.
-
-2. Get All Bikes
-   Method: GET
-   URL:Blogs
-
-```bash
-/api/v1
-```
-
-Description: Retrieves All Bikes. Optional search by type using the searchTerm query parameter by brand, Bike name, or category and Filters for price range, model, brand, category, and availability.
-
-3. Get a Single Bike
-   Method: GET
-   URL:
-
-```bash
-/api/v1/Bike/:productId
-```
-
-Description: Fetch details of a specific Bike by ID.
-
-4. Update a Bike
-   Method: PATCH
-   URL:
-
-```bash
-/api/v1/Bike/:productId
-```
-
-Description: Admin Can Updates the details of a specific Bike by ID.
-
-5. Delete a Bike
-   Method: DELETE
-   URL:
-
-```bash
-/api/v1/Bike/:productId
-```
-
-Description: Deletes a Bike by ID.
-
-## Order Endpoints
-
-1. Place an Order
-   Method: POST
-   URL:
-
-```bash
-/api/v1/order/create
-```
-
-Description: User can Place an order for a Bike.
-
-2. Update Oder Delivery Status
-   Method: PATCH
-   URL:
-
-```bash
-/api/v1/order/delivery/status/:orderId
-```
-
-Description: Admin Can Update a Order Delivery Status.
-
-3. Payment Verify
-   Method: GET
-   URL:
-
-```bash
-/api/v1/order/verify
-```
-
-Description: User Can Verify Payment.
-
-4. Get Loggedin user Order
-   Method: GET
-   URL:
-
-```bash
-/api/v1/order/all
-```
-
-Description: User Can See All Orders.
-
-5. All Orders
-   Method: GET
-   URL:
-
-```bash
-/api/v1/order/all-orders
-```
-
-Description: Get All Orders For Admin.
-
-6. Delete Orders
-   Method: DELETE
-   URL:
-
-```bash
-/api/v1/order/delete/:orderId
-```
-
-Description: Admin Can Delete Any Orders.
-
-## User Endpoints
-
-1. Create User
-   Method: POST
-   URL:
-
-```bash
-/api/v1/user
-```
-
-Description: User can Create Account.
-
-2. Get All User
-   Method: GET
-   URL:
-
-```bash
-/api/v1/user
-```
-
-Description:Get All User From DB.
-
-3. User Status Update
-   Method: PATCH
-   URL:
-
-```bash
-/api/v1/user/update
-```
-
-Description: Admin Can Update User Status.
-
-## Auth Endpoints
-
-1. Login User
-   Method: POST
-   URL:
-
-```bash
-/api/v1/auth/login
-```
-
-Description: User can Login.
-
-2. Update User Profile Info
-   Method: PATCH
-   URL:
-
-```bash
-/api/v1/auth/update
-```
-
-Description: User can Update Profile Info.
-
-3. Get Logged in User Info
-   Method: GET
-   URL:
-
-```bash
-/api/v1/auth/me
-```
-
-Description: User can Get Profile Info.
